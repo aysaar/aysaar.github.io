@@ -1,0 +1,46 @@
+.searchbox{
+    display: block;
+    width: 280px;
+    padding: 20px;
+    border: 1px solid #dedede;
+    font-family: Roboto;
+    font-weight: 300 !important;
+    line-height: 38px;
+    text-align: left !important;;
+    /*margin-left: 35%;*/
+    margin: 10px auto;
+    background-color: #40454B;
+
+}
+.options{
+    display: block;
+    color: #dedede;
+
+}
+.click {
+    cursor: pointer !important;
+    display: inline-block;
+    font-size: 15px;
+    color: #dedede;
+}
+.active{
+    color: #0083C1;
+}
+.click:hover {
+    cursor: pointer;
+    color: #0083C1;
+}
+.searchWord{
+    /*color: #777C82;*/
+    font-size: 38px;
+    color: #dedede;
+    margin-top: 14px;
+    text-align: right;
+}
+
+.txt-rotate > .wrapleft {
+    border-left: 0.08em solid #666
+}
+.txt-rotate > .wrapright {
+    border-right: 0.08em solid #666
+}

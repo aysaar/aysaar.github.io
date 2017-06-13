@@ -1,51 +1,210 @@
+<!DOCTYPE HTML>
+<!--
+	Alpha by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
+	<head>
+		<title>Aysaar</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/quran.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
 
-<head>
-    <title>
-        Quran Offline
-    </title>
-    <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
-</head>
-<link rel="stylesheet" type="text/css" href="quran.css">
-<script>
-  // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  // })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  //
-  // ga('create', 'UA-99573365-1', 'auto');
-  // ga('send', 'pageview');
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-</script>
-<body>
+		  ga('create', 'UA-99573365-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+	</head>
+	<body class="landing">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header" class="alt">
+					<h1><a href="index.html"><b>Quran</b></a> by Aysaar</h1>
+					<!-- <nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li>
+								<a href="#" class="icon fa-angle-down">Layouts</a>
+								<ul>
+									<li><a href="generic.html">Generic</a></li>
+									<li><a href="contact.html">Contact</a></li>
+									<li><a href="elements.html">Elements</a></li>
+									<li>
+										<a href="#">Submenu</a>
+										<ul>
+											<li><a href="#">Option One</a></li>
+											<li><a href="#">Option Two</a></li>
+											<li><a href="#">Option Three</a></li>
+											<li><a href="#">Option Four</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#" class="button">Sign Up</a></li>
+						</ul>
+					</nav> -->
+				</header>
+
+			<!-- Banner -->
+				<section id="banner">
+					<h2>Quran Offline</h2>
+					<p>Tanpa membutuhkan koneksi internet, Anda bisa mencari ayat Quran yang Anda inginkan !</p>
+					<!-- <p>Mencari kata tertentu pada ayat quran dan <br> meng <i>copy-paste</i>
+                teks indonesia maupun teks arab dengan mudah.</p> -->
+                <div class="searchbox">
+                    <div class="options">
+                        <div class="click active" onclick="myFunction(this, 'tas')">Tashkeel</div>
+                        &nbsp/&nbsp
+                        <div class="click" onclick="myFunction(this, 'not')">No Tashkeel</div>
+                        &nbsp/&nbsp
+                        <div class="click" onclick="myFunction(this, 'bah')">Bahasa</div>
+
+                        <script>
+                        function myFunction(elmnt,opt) {
+                            var x = document.getElementsByClassName("click");
+                            for (i = 0; i < x.length; i++) {
+                               x[i].style.color = "#dedede";
+                            }
+                            elmnt.style.color = "#0083C1";
+                            var searchWord = document.getElementsByClassName("searchWord");
+                            var wrap = document.getElementsByClassName("wrap");
+                            switch(opt) {
+                                case 'tas':
+                                    Eja.toRotate=['كَأۡسٖ','وَتَصَدَّقۡ','أَحۡسَن','وَشَهِيد','هَبَآء','جَنّٰت', 'عِين']
+                                    Eja.curPos="left"
+                                    Eja.el.innerHTML = '<span class="wrap">&nbsp</span>';
+                                    Eja.txt=""
+                                    Eja.loopNum = 0
+                                    searchWord[0].style.textAlign = "right";
+                                    break;
+                                case 'not':
+                                    Eja.toRotate=['الحق','الم','مسلمين','علم','الأمس','يخشون', 'ءامنو']
+                                    Eja.curPos="left"
+                                    Eja.el.innerHTML = '<span class="wrap">&nbsp</span>';
+                                    Eja.txt=""
+                                    Eja.loopNum = 0
+                                    searchWord[0].style.textAlign = "right";
+                                    break;
+                                case 'bah':
+                                    Eja.toRotate=['rezeki','segera','ampunan','maaf','seimbang','tambahan', 'surga']
+                                    Eja.curPos="right"
+                                    Eja.el.innerHTML = '<span class="wrap">&nbsp</span>';
+                                    Eja.txt=""
+                                    Eja.loopNum = 0
+                                    searchWord[0].style.textAlign = "left";
+                                    break;
+                                default:
+                                    Eja.toRotate=[]
+                            }
+                        }
+                        </script>
+                    </div>
+                    <div class="searchWord">
+                        <span
+                           class="txt-rotate"
+                           data-period="2000"
+
+                           data-rotate='["كَأۡسٖ","وَتَصَدَّقۡ","أَحۡسَن", "وَشَهِيد", "هَبَآء", "جَنّٰت", "عِين" ]'>
+                       </span>
+
+                    </div>
+                </div>
+					<!-- <ul class="actions">
+						<li><a href="#" class="button special eja3">Install</a></li>
+					</ul> -->
+				</section>
+
+			<!-- Main -->
+				<section id="main" class="container">
+
+					<section class="box special">
+                        <span class="image featured">
+                            <img class="eja" src="images/main.png" alt="" />
+                        </span>
+						<header class="major">
+							<h2>Mencari ayat, sekarang menjadi mudah !
+							</h2>
+							<p>Dengan mengingat potongan suatu ayat, Anda tidak perlu lagi koneksi
+                                Internet untuk mencarinya dalam Quran ! </p>
 
 
+								<ul class="actions eja4">
+									<li><a class="button"
+                                        onclick="ga('send', 'event', 'button', 'click', '1-2-0-win64');" target="blank" style="text-decoration:none" href="https://github.com/aysaar/quran-offline/releases/download/1.2.0/Quran.Offline.Windows.64bit.Setup.1.2.0.exe">
+    								                    Install di Windows</a></li>
+								</ul>
+						</header>
+					</section>
 
-    <div class="wrapper" id="heheo">
-        <div class="picframe">
-            <div class="pic1">
-            </div>
-        </div>
-        <div class="center">
-            <div class="maintitle">
-                Quran Offline
-            </div>
-            <div class="subtitle">
-                Versi 1.2.0
-                <a onclick="ga('send', 'event', 'button', 'click', '1-2-0-win64');" target="blank" style="text-decoration:none" href="https://github.com/aysaar/quran-offline/releases/download/1.2.0/Quran.Offline.Windows.64bit.Setup.1.2.0.exe">
-                    Install di Windows</a>
-            </div>
-            <div class="text">
-                Mencari kata tertentu pada ayat quran dan meng <i>copy-paste</i>
-                teks indonesia maupun teks arab dengan mudah.
-            </div>
+				</section>
 
-        </div>
+			<!-- CTA -->
+				<section id="cta">
 
-        
+                    <!-- Begin MailChimp Signup Form -->
+                    <div id="mc_embed_signup">
+                    <form action="//burgundylabs.us12.list-manage.com/subscribe/post?u=734054a2eb44eec8ffca5e48b&amp;id=6e009edfad" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                        <div id="mc_embed_signup_scroll">
+						<h2>Sign up for Newsletter</h2>
+						<p>Masukkan alamat email Anda untuk mendapat kabar terbaru dari aplikasi ini</p>
+						<div class="row uniform 50%">
+		                    <div class="8u 12u(mobilep) mc-field-group">
+		                    	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
+		                    </div>
+							<div class="4u 12u(mobilep)">
+								<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+	                        </div>
+                        </div>
+	                    	<div id="mce-responses" class="clear">
+	                    		<div class="response" id="mce-error-response" style="display:none"></div>
+	                    		<div class="response" id="mce-success-response" style="display:none"></div>
+	                    	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_734054a2eb44eec8ffca5e48b_6e009edfad" tabindex="-1" value=""></div>
 
+                    </form>
+                    </div>
 
-    </div>
-</body>
+                    <!--End mc_embed_signup-->
+				</section>
 
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+						<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Aysaar. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollgress.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/quran.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
