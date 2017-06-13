@@ -3,7 +3,7 @@
 /*@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic,500,500italic,700,700italic,900,900italic&subset=latin,latin-ext,cyrillic,cyrillic-ext,greek-ext,greek,vietnamese);*/*/
 
 
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);
+/*@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);*/
 html, html * {
   font-family: Roboto;
 }
@@ -21,8 +21,8 @@ body{
     background-image: url("img/main.png");
     background-size: contain;
     background-repeat: no-repeat;
-    background-size: 600px 323px;
     background-position: center center;
+    background-size: 600px 323px;
     height: 323px;
 
 }
@@ -40,6 +40,47 @@ body{
     font-weight: 300 !important;
     font-size: 30px;
     line-height: 38px;
+}
+
+
+.searchbox{
+    display: block;
+    width: 250px;
+    padding: 20px;
+    border: 1px solid #dedede;
+    font-family: Roboto;
+    font-weight: 300 !important;
+    line-height: 38px;
+    text-align: left !important;;
+    font-size: 18px;
+    /*margin-left: 35%;*/
+    margin: 10px auto;
+    background-color: #40454B;
+
+}
+.options{
+    display: block;
+    line-height: 18px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: #dedede;
+
+}
+.click {
+    cursor:default;
+    display: inline-block;
+    color: #dedede;
+}
+.active{
+    color: #0083C1;
+}
+.click:hover {
+    color: #0083C1;
+}
+.searchWord{
+    /*color: #777C82;*/
+    font-size: 38px;
+    color: #dedede;
 }
 .subtitle{
     font-family: Roboto;
