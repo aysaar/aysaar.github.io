@@ -40,7 +40,9 @@
 
 .txt-rotate > .wrapleft {
     border-left: 0.08em solid #666
+    padding-left: 3px;
 }
 .txt-rotate > .wrapright {
     border-right: 0.08em solid #666
+    padding-right: 3px;
 }
